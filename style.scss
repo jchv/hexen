@@ -1,0 +1,41 @@
+.hexview {
+  font-family: monospace;
+
+  .f0 { background-color: #eeeecc; }
+  .f1 { background-color: #eeccee; }
+  .f2 { background-color: #eecccc; }
+  .f3 { background-color: #cceeee; }
+  .f4 { background-color: #cceecc; }
+  .f5 { background-color: #ccccee; }
+  .f6 { background-color: #cccccc; }
+  .f7 { background-color: #aaaa88; }
+  .f8 { background-color: #aa88aa; }
+  .f9 { background-color: #aa8888; }
+
+
+  .hexline {
+    .lineno {
+      opacity: 0.8;
+
+      &::after { content: ': '; }
+    }
+
+    .hexdata {
+      span {
+        &::after { content: ' '; }
+      }
+
+      .diff {
+        background-color: rgba(255, 0, 0, 0.3);
+      }
+
+      &::after { content: ' | '; }
+    }
+
+    .asciidata {
+      .np {
+        opacity: 0.7;
+      }
+    }
+  }
+}
